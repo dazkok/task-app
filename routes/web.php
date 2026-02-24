@@ -7,5 +7,5 @@ Route::get('/', function () {
     return redirect()->to('/tasks');
 });
 
+Route::put('tasks/reorder', [TaskController::class, 'reorder'])->name('tasks.reorder');
 Route::resource('tasks', TaskController::class);
-Route::put('tasks/{task}/reorder', [TaskController::class, 'reorder'])->name('tasks.reorder');
