@@ -1,6 +1,34 @@
 # Task App — Quick Start
 
-Minimal instructions for running the project distributed as a zip (includes .env).
+For people who clone the repository
+- Clone and enter repository:
+  ```bash
+  git clone <repo-url> task-app
+  cd task-app
+  ```
+- Install PHP deps and frontend deps:
+  ```bash
+  composer install
+  npm install
+  ```
+- Copy example env and set DB credentials (edit .env):
+  ```bash
+  cp .env.example .env    # or: copy .env.example .env on Windows
+  # edit DB_* values in .env as needed
+  ```
+- Generate app key and run migrations:
+  ```bash
+  php artisan key:generate
+  php artisan migrate
+  ```
+- Build assets (dev) and run:
+  ```bash
+  npm run dev
+  php artisan serve --host=127.0.0.1 --port=8000
+  ```
+- Open: http://127.0.0.1:8000/tasks
+
+Minimal instructions for running the project distributed as a zip (includes .env)
 
 Prerequisites
 - PHP 8.x (8.5 originally), Composer
